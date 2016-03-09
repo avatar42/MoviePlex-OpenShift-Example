@@ -44,7 +44,7 @@
         "creationTimestamp": null
       },
       "spec": {
-        "host": "www.example.com",
+        "host": "example.openshift.beesshop.org",
         "to": {
           "kind": "Service",
           "name": "frontend"
@@ -111,7 +111,7 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "git://github.com/bparees/javaee7-hol.git"
+            "uri": "https://github.com/alvarolobato/openshift.git"
           }
         },
         "strategy": {
