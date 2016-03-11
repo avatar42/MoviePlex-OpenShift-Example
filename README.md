@@ -5,7 +5,7 @@ This is the Movieplex7 example applications, prepared to be deployed on OpenShif
 
 The included `Jenkinsfile` will allow Jenkins to deploy the application to OpenShift in a Pipeline by using the image to source (I2S) OpenShift functionality.
 
-# Running the example app
+# Running the application
 
 For information on how to prepare an OpenShift 3 Origin environment, refer to: https://github.com/openshift/origin/blob/master/examples/sample-app/README.md
 If you already have a working OpenShift environment just follow these steps. You will need to have the OpenShift CLI tools installed:
