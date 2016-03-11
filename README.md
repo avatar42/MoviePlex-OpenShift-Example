@@ -3,7 +3,7 @@ Movieplex on Openshift
 
 This is the Movieplex7 example applications, prepared to be deployed on OpenShift origin with the application template `wildfly-j2ee-application-template.json`.
 
-The included Jenkins file will allow Jenkins to deploy the application to OpenShift in a Pipeline by using the image to source (I2S) OpenShift functionality.
+The included `Jenkinsfile` will allow Jenkins to deploy the application to OpenShift in a Pipeline by using the image to source (I2S) OpenShift functionality.
 
 # Running the example app
 
