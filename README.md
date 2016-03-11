@@ -1,8 +1,21 @@
-# Running the sample app
-1. run steps 1-9 from the regular sample-app here:
-https://github.com/openshift/origin/blob/master/examples/sample-app/README.md
-1. run "osc process -n test -f application-template-jeebuild.json | osc create -n test -f -"   (using the template json from the app repo)
-1. run "osc start-build -n test jee-sample-build"
-1. run steps 15-18 from the regular sample-app readme
-  * the app url is http://<ip address from 'osc get services -n test'>:8080/movieplex7-1.0-SNAPSHOT/
+# Movieplex on Openshift
+
+This is the Movieplex7 example applications, prepared to be deployed on OpenShift origin with the application template wildfly-j2ee-application-template.json.
+The included Jenkins file will allow Jenkins to deploy the application to OpenShift in a Pipeline by using the image to source (I2S) OpenShift functionality.
+
+# Running the example app
+
+For information on how to prepare an OpenShift 3 Origin environment, refer to: https://github.com/openshift/origin/blob/master/examples/sample-app/README.md
+If you already have a working OpenShift environment just follow these steps. You will need to have the OpenShift CLI tools installed:
+
+1. Login to OpenShift
+$ oc login --server=<server_url>
+1. Create a new project
+$ oc new-project movieplex-application --display-name="MoviePlex WildFly + Jenkins Application Example" --description="This is an example project to demonstrate OpenShift v3 Origin integrated in an Jekins Pipeline"
+1. Upload the application template. You need to be in the root of this repository
+$ oc create -f wildfly-j2ee-application-template.json
+1. Create the applications with the uploaded template. This can also be done from the web interface by clicking "Add to Project" and selecting the template. It will allow you to change the parameters. You can also specify your parameters in the command-line by using --param=PUBLIC_URL=test.domain.org, you should at least specify an PUBLIC_URL parameter matching your environment
+$ oc new-app wildfly-j2ee-application
+
+If everithing went correctly the applications will automatically build and deployed. It will be accessible on the specified PUBLIC_URL
 
