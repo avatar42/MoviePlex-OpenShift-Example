@@ -1,5 +1,5 @@
-Movieplex on Openshift
-======================
+Movieplex on Openshift + Jenkins
+================================
 
 This is the Movieplex7 example applications, prepared to be deployed on OpenShift origin with the application template `wildfly-j2ee-application-template.json`.
 
