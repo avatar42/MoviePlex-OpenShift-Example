@@ -1,7 +1,7 @@
 stage 'Build'
 node {
     docker.image('cloudbees/java-build-tools:0.0.7.1').inside {
-        git 'https://github.com/alvarolobato/MoviePlex-OpenShift-Example.git'
+        git 'https://github.com/CloudBees-community/MoviePlex-OpenShift-Example.git'
         sh 'mvn clean package'
         archive 'target/*.war,target/*.jar'
     }
