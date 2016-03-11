@@ -13,15 +13,15 @@ If you already have a working OpenShift environment just follow these steps. You
 ```
     $ oc login --server=<server_url>
 ```
-1. Create a new project
+2. Create a new project
 ```
     $ oc new-project movieplex-application --display-name="MoviePlex WildFly + Jenkins Application Example" --description="This is an example project to demonstrate OpenShift v3 Origin integrated in an Jekins Pipeline"
 ```
-1. Upload the application template. You need to be in the root of this repository
+3. Upload the application template. You need to be in the root of this repository
 ```
     $ oc create -f wildfly-j2ee-application-template.json
 ```
-1. Create the applications with the uploaded template. 
+4. Create the applications with the uploaded template. 
 ```
     $ oc new-app wildfly-j2ee-application
 ```
@@ -29,5 +29,5 @@ If you already have a working OpenShift environment just follow these steps. You
 	
 **NOTE** You can also specify your parameters in the command-line by using --param=PUBLIC_URL=test.domain.org, you should at least specify an PUBLIC_URL parameter matching your environment
 
-1. If everithing went correctly the applications will automatically build and deployed. It will be accessible on the specified PUBLIC_URL
+5. If everithing went correctly the applications will automatically build and deployed. It will be accessible on the specified PUBLIC_URL
 
