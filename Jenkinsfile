@@ -21,8 +21,8 @@ node {
         //Requires CloudBees OpenShift CLI Plugin to
         //automatically install OC client and log in to the server
         wrap([$class: 'OpenShiftBuildWrapper', 
-                url: '<openshift_url>',
-                credentialsId: '<credential_id>',
+                url: 'https://openshift.beesshop.org:8443',
+                credentialsId: 'openshift-admin-aws',
                 insecure: true, //Don't check server certificate
                 ]) {
 
