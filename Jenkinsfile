@@ -25,7 +25,6 @@ node {
                 credentialsId: 'openshift-admin-aws',
                 insecure: true, //Don't check server certificate
                 ]) {
-
                 // oc & source2image
                 sh """
                 oc project movieplex-application
