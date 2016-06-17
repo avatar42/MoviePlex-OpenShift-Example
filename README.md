@@ -40,3 +40,14 @@ Once the application is created on OpenShift follow these steps to configure Jen
 * Install and configure the CloudBees OpenShift CLI Plugin
 * Create a Username and Password credentials to login to your OpenShift server
 * Create a Pipeline Job and paste the `Jenkinsfile` script on the Pipeline Definition
+
+**NOTE** If you are running Jenkins from another OpenShift project, you can use the system account to authenticate the OpenShift CLI, but you need to grand privileges to deploy on the project. You can do so by issuing the following command:
+
+```oc policy add-role-to-user admin system:serviceaccount:<jenkins project name>:default -n <destination project name>```
+
+In this case, for Jenkins running on CJP project would be:
+
+```oc policy add-role-to-user admin system:serviceaccount:cjp:default -n movieplex-application```
+
+by doing this you can omit the oc login step by not specifiying the credentialsId parameters to the wrapper.
+
