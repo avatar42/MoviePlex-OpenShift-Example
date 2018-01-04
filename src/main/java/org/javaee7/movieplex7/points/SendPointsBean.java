@@ -57,7 +57,7 @@ import javax.validation.constraints.Pattern;
 public class SendPointsBean {
 
 	@Inject
-	@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
+	//@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
 	JMSContext context;
 
 	@NotNull

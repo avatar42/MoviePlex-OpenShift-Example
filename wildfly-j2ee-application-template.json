@@ -360,7 +360,7 @@
     {
       "name": "GIT_REPO",
       "description": "Git Repository with application source code",
-      "value": "https://github.com/CloudBees-community/MoviePlex-OpenShift-Example.git"
+      "value": "https://github.com/avatar42/MoviePlex-OpenShift-Example.git"
     },
     {
       "name": "PUBLIC_URL",

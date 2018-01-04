@@ -374,7 +374,6 @@ ${mysql.enabled}" use-java-context="true" pool-name="MySQLDS" use-ccm="true">
                     <pooled-connection-factory name="hornetq-ra">
                         <transaction mode="xa"/>
                         <connectors>
-                            <connector-ref connector-name="in-vm"/>
                         </connectors>
                         <entries>
                             <entry name="java:/JmsXA"/>
@@ -390,6 +389,9 @@ ${mysql.enabled}" use-java-context="true" pool-name="MySQLDS" use-ccm="true">
                     <jms-queue name="DLQ">
                         <entry name="java:/jms/queue/DLQ"/>
                     </jms-queue>
+                    <!-- jms-queue name="pointsQueue">
+                        <entry name="java:global/jms/pointsQueue"/>
+                    </jms-queue -->
                 </jms-destinations>
             </hornetq-server>
         </subsystem>
