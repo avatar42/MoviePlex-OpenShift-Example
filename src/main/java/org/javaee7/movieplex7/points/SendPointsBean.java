@@ -43,6 +43,7 @@ import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.jms.JMSConnectionFactory;
 import javax.jms.JMSContext;
 import javax.jms.Queue;
 import javax.validation.constraints.NotNull;
@@ -56,7 +57,7 @@ import javax.validation.constraints.Pattern;
 public class SendPointsBean {
 
 	@Inject
-	//@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
+	@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
 	JMSContext context;
 
 	@NotNull

@@ -47,6 +47,7 @@ import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.jms.JMSConnectionFactory;
 import javax.jms.JMSConsumer;
 import javax.jms.JMSContext;
 import javax.jms.JMSDestinationDefinition;
@@ -63,7 +64,7 @@ import javax.jms.QueueBrowser;
 public class ReceivePointsBean {
 
 	@Inject
-	// @JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
+	@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
 	JMSContext context;
 
 	@Resource(lookup = "java:global/jms/pointsQueue")
