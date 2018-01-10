@@ -72,7 +72,7 @@ public class SendPointsBean {
 		this.message = message;
 	}
 
-	@Resource(lookup = "java:global/jms/pointsQueue")
+	//@Resource(lookup = "java:global/jms/pointsQueue")
 	Queue pointsQueue;
 
 	public void sendMessage() {

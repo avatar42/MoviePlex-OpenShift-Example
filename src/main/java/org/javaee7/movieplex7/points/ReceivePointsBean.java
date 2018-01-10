@@ -64,7 +64,7 @@ import javax.jms.QueueBrowser;
 public class ReceivePointsBean {
 
 	@Inject
-	@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
+	//@JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
 	JMSContext context;
 
 	@Resource(lookup = "java:global/jms/pointsQueue")
